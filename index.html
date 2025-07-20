@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Tiket Garuda Indonesia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f3f3;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #1b4f72;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            margin: auto;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #1b4f72;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #154360;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pemesanan Tiket Garuda Indonesia</h1>
+    <form id="ticketForm">
+        <label>Nama Lengkap:</label>
+        <input type="text" required>
+
+        <label>Tujuan Penerbangan:</label>
+        <select required>
+            <option value="">-- Pilih Tujuan --</option>
+            <option value="Jakarta">Jakarta</option>
+            <option value="Surabaya">Surabaya</option>
+            <option value="Denpasar">Denpasar</option>
+            <option value="Medan">Medan</option>
+        </select>
+
+        <label>Tanggal Keberangkatan:</label>
+        <input type="date" required>
+
+        <label>Jumlah Tiket:</label>
+        <input type="number" min="1" value="1" required>
+
+        <button type="submit">Pesan Tiket</button>
+    </form>
+
+    <script>
+        document.getElementById("ticketForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            alert("Tiket berhasil dipesan!");
+        });
+    </script>
+</body>
+</html>
